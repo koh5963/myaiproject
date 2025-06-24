@@ -1,5 +1,6 @@
 """Main module."""
-import ai_driver
+from myaiproject import ai_driver, pyfile_creator
 
-def get_ai_response():
-    ai_driver.get_ai_response()
+def create_code():
+    response = ai_driver.get_ai_response()
+    pyfile_creator.create_new(response)

@@ -1,7 +1,7 @@
-from myaiproject import ai_driver, pyfile_creator
+from myaiproject import myaiproject
 
 def main():
-    pyfile_creator.create_new(ai_driver.get_ai_response())
+    myaiproject.create_code()
 
 if __name__ == "__main__":
     main()
