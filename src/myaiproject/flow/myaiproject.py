@@ -1,5 +1,6 @@
 """Main module."""
-from myaiproject import ai_driver, pyfile_creator
+from myaiproject.output import pyfile_creator
+from myaiproject.ai import ai_driver
 
 def create_code():
     user_requirements = input("Please enter your requirements... : ")
@@ -15,3 +16,4 @@ def create_design():
         return
 
     response = ai_driver.get_ai_design(user_requirements)
+    print(response)

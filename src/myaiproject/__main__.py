@@ -1,4 +1,4 @@
-from myaiproject import myaiproject
+from myaiproject.flow import myaiproject
 
 def main():
     myaiproject.create_code()
