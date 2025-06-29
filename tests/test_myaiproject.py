@@ -5,7 +5,7 @@
 import pytest
 
 
-from myaiproject.flow import myaiproject
+from myaiproject.flow import app_flow
 
 
 @pytest.fixture

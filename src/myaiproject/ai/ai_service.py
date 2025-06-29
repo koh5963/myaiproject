@@ -1,13 +1,13 @@
 from langchain_openai import ChatOpenAI
 from langchain_core.messages import HumanMessage
 from langchain.prompts import PromptTemplate
-from . import prompt_template, ai_config
+from myaiproject.ai import prompt_template, ai_config
 
 llm: ChatOpenAI = None
 def connect() -> ChatOpenAI :
     return ai_config.connection_config()
 
-def get_ai_design(user_input: str) -> str:
+def generate_design_docs(user_input: str) -> str:
     template = PromptTemplate(
         input_variables=["user_requirement"],
         template=prompt_template.template_design   
@@ -18,7 +18,7 @@ def get_ai_design(user_input: str) -> str:
     response = llm.invoke([HumanMessage(content=prompt)])
     return response.content
 
-def get_ai_coding(user_input: str) -> str :
+def generate_code(user_input: str) -> str :
     template = PromptTemplate(
         input_variables=["user_requirement"],
         template=prompt_template.template_coding
